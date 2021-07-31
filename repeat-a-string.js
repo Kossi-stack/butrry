@@ -1,13 +1,10 @@
-module.exports = function repeatStringNumTimes (str, num) {
-    if ( num <= 0){
-      return "";
-    }
-    let result = "";
-  
-    for (let i = 0; i < num; i += 1) {
-      result += str
-    }
-    return result;
+function repeatStringNumTimes (str, num) {
+  let repeatStr = '';
+  while (num > 0) {
+    repeatStr += str;
+    num--
   }
+  return repeatStr;
+}
 
-  repeatStringNumTimes("abc", 3);
+module.exports = repeatStringNumTimes
